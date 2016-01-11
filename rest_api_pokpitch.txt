@@ -13,7 +13,7 @@ Create new game
 —————————————————
 
 List current state of all doors
- -  URL GET /doors/
+ -  URL GET /{game_id}/doors/
 
  [
 
@@ -70,7 +70,7 @@ List current state of all doors
 —————————————————
 Select a door
 
-- PUT /door/0
+- PUT /{game_id}/door/0
 { “selected”: true }
 
 - return
@@ -84,7 +84,7 @@ Select a door
 —————————————————
 
 Open a door
-- PUT /door/0
+- PUT /{game_id}/door/0
 { “state”: “OPENED” }
 - return
 {
