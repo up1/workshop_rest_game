@@ -1,0 +1,29 @@
+1. Create new game
+URI:  /game/1
+Verb: /POST
+JSON:
+
+2. List current state of all doors
+URI: /game/1/listdoor/
+Verb: /GET
+JSON:
+
+3. Select a door
+URI: /game/1/door
+Verb:  /PUT
+JSON: {statusDoor: SELECTED}
+
+4. Open a door
+URI: /game/1/door
+Verb: /POST
+JSON:{statusDoor: OPENED}
+
+5. List the final state of the game
+URI: /game/1/door/
+Verb: /POST
+JSON:
+
+6. Delete game
+URI: /game/1
+Verb: /DELETE
+JSON:
