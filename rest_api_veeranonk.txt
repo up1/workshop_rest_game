@@ -39,6 +39,7 @@ POST doors/open/gameId/doorNo
 
 POST doors/stateOfGame/gameId
 {
+	"gameId":"000001",
 	“status”:”WIN”
 }
 
