@@ -10,23 +10,23 @@ HTTP response :
 URI : game/1/door/
 HTTP : GET 
 HTTP response :	
-[{"status":"close"},
-{"status":"close"},
-{"status":"close"}]
+[
+{"status":"close","item":"cat"},
+{"status":"close","item":"dog"},
+{"status":"close","item":"fish"}
+]
 	
 3. Select a door 
 URI : game/1/door/1/{"status":  "selected"}
 HTTP : PUT 
 HTTP response :	
-{"door_id":"1",
-"status":"selected"}
+{"status":"selected"}
 
 4. Open a door
 URI : game/1/door/1/{"status":  "opened"} 
 HTTP : PUT 		
 HTTP response :	
-{"door_id":"1",
-"status":"opened"}
+{"status":"opened"}
 	
 5. List the final state the game
 URI : game/1
