@@ -18,9 +18,9 @@ GET doors/list/gameId
     {“door_no”:”2”, "item":"empty", “state”: “CLOSE”},
     {“door_no”:”3”, "item":”empty”, “state”:"OPENED"},
     {“door_no”:”4”, "item":"cat", “state”: “CLOSE”},
-	{“door_no”:”5”, "item":"empty", "state": "CLOSE"},
+    {“door_no”:”5”, "item":"empty", "state": "CLOSE"},
     {“door_no”:”6”, "item":"empty", “state”: "OPENED"},
-	{“door_no”:”7”, "item":”empty”, “state”:”CLOSE”},
+    {“door_no”:”7”, "item":”empty”, “state”:”CLOSE”},
     {“door_no”:”8”, "item":"empty", “state”: “CLOSE”},
 ]
 
