@@ -1,0 +1,37 @@
+URI/VERB/JSON
+
+Create new game
+URI:	/NewGame
+VERB:	POST
+JSON:	-
+RESPONSE:	
+
+List current state of all doors
+URI:	/StateAllDoors
+VERB:	GET
+JSON:	/GET/game/1
+RESPONSE:	
+
+Select a doors
+URI:	/SelectDoor
+VERB:	PUT
+JSON:	{"selectedDoor" : doorNumber}
+RESPONSE:	
+
+Open a doors
+URI:	/OpenDoor
+VERB:	PUT
+JSON:	{"selectedDoor" : doorNumber}
+RESPONSE:	
+
+List the final state of the game
+URI:	/ListGameState
+VERB:	GET
+JSON:	/GET/game/1
+RESPONSE:	
+
+Delete game
+URI:	/DeleteGame
+VERB:	DELETE
+JSON:	/GET/game/1
+RESPONSE:	
