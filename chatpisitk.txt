@@ -1,18 +1,40 @@
 1. create new game
 	POST games/
-	JSON null
+	JSON {}
+	
 2. list current state of all doors
 	GET games/door/
-	JSON {"status":"open","status":"close"}
+	JSON [{	"status":"open",
+			"status":"close"}]
+			
 3. select a door
 	PUT games/door/1/
-	JSON {"staus":"open"}
+	JSON [	{ "id":"1",
+			  "staus":"close",
+			  "items":"cat"},
+			{ "id":"2",
+			  "staus":"close",
+			  "items":"dog"},
+			{ "id":"3",
+			  "staus":"close",
+			  "items":"null"}]
+			  
 4. open a door
 	GET games/door/1/
-	JSON {"status":"open"}
+	JSON [	{ "id":"1",
+			  "staus":"close",
+			  "items":"cat"},
+			{ "id":"2",
+			  "staus":"open",
+			  "items":"dog"},
+			{ "id":"3",
+			  "staus":"close",
+			  "items":"null"}]
+			  
 5. list the final state of the game
 	GET games/status/
 	JSON {"game_staus":"win"}
+	
 6. delete game
 	DELETE games/
-	JSON nul
+	JSON {}
