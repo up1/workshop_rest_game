@@ -1,0 +1,46 @@
+1. Create new game
+URI : creategame
+HTTP : POST game/
+HTTP response : 
+{
+"game_id":"1",
+"status":"playing",
+"door":"3"
+}
+
+2. List current state of all doors
+URI : listdoor
+HTTP : Get game/1/door/
+HTTP response :	
+[{"door_id":"1",
+"status":"close"},
+{"door_id":"2",
+"status":"close"},
+{"door_id":"3",
+"status":"close"}]
+	
+3. Select a door 
+URI : selectdoor
+HTTP : PUT game/1/door/1/{"status":  "selected"}
+HTTP response :	
+{"door_id":"1",
+"status":"selected"}
+
+4. Open a door
+URI : opendoor
+HTTP : PUT game/1/door/{"status":  "opened"} 		
+HTTP response :	
+{"door_id":"1",
+"status":"opened"}
+	
+5. List the final state the game
+URI : finalstatus
+HTTP : GET game/1	
+HTTP response :	
+{"status":"win"}
+
+6. Delete game
+URI : deletegame
+HTTP : DELETE game/1	
+HTTP response :	
+{"status":"delete"}
