@@ -1,0 +1,99 @@
+
+Create new game
+- URL POST /games
+- return
+{
+	“id”:”1”,
+	“num_of_doors”: 7,
+	“win_score”: 5,
+	“state”: “WIN”,
+	“timeout”: 1
+}
+
+—————————————————
+
+List current state of all doors
+ -  URL GET /doors/
+[ {
+	“id”:”0”,
+	“cat”: “FOUNDED”,
+	“state”: “CLOSED”,
+        “selected”: false
+}, {
+	“id”:”1”,
+	“cat”: “NOT_FOUNDED”,
+	“state”: “OPENED”,
+        “selected”: false
+}, {
+	“id”:”2”,
+	“cat”: “FOUNDED”,
+	“state”: “OPENED”,
+        “selected”: false
+}, {
+	“id”:”3”,
+	“cat”: “FOUNDED”,
+	“state”: “CLOSED”,
+        “selected”: false
+}, {
+	“id”:”4”,
+	“cat”: “NOT_FOUNDED”,
+	“state”: “CLOSED”,
+        “selected”: false
+}, {
+	“id”:”5”,
+	“cat”: “FOUNDED”,
+	“state”: “OPENED”,
+        “selected”: false
+}, {
+	“id”:”6”,
+	“cat”: “NOT_FOUNDED”,
+	“state”: “OPENED”,
+        “selected”: false
+}
+]
+
+—————————————————
+Select a door
+
+- PUT /door/0
+{ “selected”: true }
+
+- return
+{
+	“id”:”0”,
+	“cat”: “FOUNDED”,
+	“state”: “CLOSED”,
+        “selected”: true
+}
+
+—————————————————
+
+Open a door
+- PUT /door/0
+{ “state”: “OPENED” }
+- return
+{
+	“id”:”0”,
+	“cat”: “FOUNDED”,
+	“state”: “OPENED”,
+        “selected”: true
+}
+
+—————————————————
+
+List the final state of the game
+- GET /games/
+{
+	“id”:”1”,
+	“num_of_doors”: 7,
+	“win_score”: 5,
+	“state”: “WIN”,
+	“timeout”: 1
+}
+
+
+—————————————————
+
+Delete game
+- DELETE /games/0
+ } } ]
