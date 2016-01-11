@@ -20,13 +20,13 @@ GET doors/${gameId}/list
 Select a door
 PUT doors/${gameId}/select/${doorNo}
 {
-	"doorNo":”1”,
+	"state":"SELECTED",
 }
 
 Open a door
 POST doors/${gameId}/open/${doorNo}
 {
-	"state":"FOUND"
+	"state":"OPENED"
 }
 
 List the final state of the game
