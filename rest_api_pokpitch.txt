@@ -14,42 +14,57 @@ Create new game
 
 List current state of all doors
  -  URL GET /doors/
-[ {
-	“id”:”0”,
-	“cat”: “FOUNDED”,
-	“state”: “CLOSED”,
-        “selected”: false
-}, {
-	“id”:”1”,
-	“cat”: “NOT_FOUNDED”,
-	“state”: “OPENED”,
-        “selected”: false
-}, {
-	“id”:”2”,
-	“cat”: “FOUNDED”,
-	“state”: “OPENED”,
-        “selected”: false
-}, {
-	“id”:”3”,
-	“cat”: “FOUNDED”,
-	“state”: “CLOSED”,
-        “selected”: false
-}, {
-	“id”:”4”,
-	“cat”: “NOT_FOUNDED”,
-	“state”: “CLOSED”,
-        “selected”: false
-}, {
-	“id”:”5”,
-	“cat”: “FOUNDED”,
-	“state”: “OPENED”,
-        “selected”: false
-}, {
-	“id”:”6”,
-	“cat”: “NOT_FOUNDED”,
-	“state”: “OPENED”,
-        “selected”: false
-}
+
+ [
+
+	 {
+	 “id”:”0”,
+	 “cat”: “FOUNDED”,
+	 “state”: “CLOSED”,
+	 “selected”: false
+	 },
+
+	 {
+		 “id”:”1”,
+		 “cat”: “NOT_FOUNDED”,
+		 “state”: “OPENED”,
+		 “selected”: false
+		},
+
+	 {
+			“id”:”2”,
+			“cat”: “FOUNDED”,
+			“state”: “OPENED”,
+			“selected”: false
+		},
+
+		{
+			“id”:”3”,
+			“cat”: “FOUNDED”,
+			“state”: “CLOSED”,
+			“selected”: false
+		},
+
+		{
+			“id”:”4”,
+			“cat”: “NOT_FOUNDED”,
+			“state”: “CLOSED”,
+			“selected”: false
+		},
+
+		{
+			“id”:”5”,
+			“cat”: “FOUNDED”,
+			“state”: “OPENED”,
+			“selected”: false
+		},
+
+		{
+			“id”:”6”,
+			“cat”: “NOT_FOUNDED”,
+			“state”: “OPENED”,
+			“selected”: false
+		}
 ]
 
 —————————————————
@@ -63,7 +78,7 @@ Select a door
 	“id”:”0”,
 	“cat”: “FOUNDED”,
 	“state”: “CLOSED”,
-        “selected”: true
+  “selected”: true
 }
 
 —————————————————
@@ -76,7 +91,7 @@ Open a door
 	“id”:”0”,
 	“cat”: “FOUNDED”,
 	“state”: “OPENED”,
-        “selected”: true
+  “selected”: true
 }
 
 —————————————————
@@ -96,4 +111,3 @@ List the final state of the game
 
 Delete game
 - DELETE /games/0
- } } ]
