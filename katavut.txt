@@ -1,37 +1,37 @@
 URI/VERB/JSON
 
 Create new game
-URI:	/NewGame
+URI:	GAME/1/NewGame
 VERB:	POST
 JSON:	-
 RESPONSE:	
 
 List current state of all doors
-URI:	/StateAllDoors
+URI:	/GAME/1/StateAllDoors
 VERB:	GET
-JSON:	/GET/game/1
+JSON:	
 RESPONSE:	
 
 Select a doors
-URI:	/SelectDoor
+URI:	GAME/1/SelectDoor
 VERB:	PUT
 JSON:	{"selectedDoor" : doorNumber}
 RESPONSE:	
 
 Open a doors
-URI:	/OpenDoor
+URI:	/GAME/1/OpenDoor
 VERB:	PUT
 JSON:	{"selectedDoor" : doorNumber}
 RESPONSE:	
 
 List the final state of the game
-URI:	/ListGameState
+URI:	/GAME/1/ListGameState
 VERB:	GET
 JSON:	/GET/game/1
 RESPONSE:	
 
 Delete game
-URI:	/DeleteGame
+URI:	/GAME/1/DeleteGame
 VERB:	DELETE
 JSON:	/GET/game/1
 RESPONSE:	
