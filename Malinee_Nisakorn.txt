@@ -1,7 +1,7 @@
 Interaction model
 
 Create new game
-	uri : /create
+	uri : /create/gameId
 	verb : post    
 	json: {"gameStatus" : "" , "time":"60" , "target":"book"}
 
@@ -18,12 +18,12 @@ List current state of all doors
  		]} 
 
 Select a door
-	uri : /select/1
+	uri : /select/id
         verb : put
         json : {"canOpen":"true"}
 
 Open a door
-        uri : /open/1
+        uri : /open/id
         verb : put   
         json : {"item" : "book"} 
   
@@ -33,6 +33,8 @@ List the final state of game
         json : {"gameStatus" : "Success"} 
 
 Delete game
-        uri : /delete
-	verb : post    
+        uri : /delete/gameId
+	verb : delete
+
+
 
