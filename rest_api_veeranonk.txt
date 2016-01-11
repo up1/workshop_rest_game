@@ -18,7 +18,7 @@ GET doors/${gameId}/list
 ]
 
 Select a door
-PUT doors/${gameId}/select/${doorNo}
+POST doors/${gameId}/select/${doorNo}
 {
 	"state":"SELECTED",
 }
