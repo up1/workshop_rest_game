@@ -1,0 +1,41 @@
+Interaction Model
+Door Game
+
+1. Create new game
+URI: 	/game/doorGame
+Verb: 	POST
+JSON:	{"doorGame": [
+		 {"gameStatus": "playing", "noOfDoors": 5}
+		]}
+
+2. List current state of all doors
+URI:	/game/doorGame/doorState
+Verb:	GET
+JSON:	{"doorState": [
+		 {"door1": "close"},
+		 {"door2": "close"},
+		 {"door3": "close"},
+		 {"door4": "close"},
+		 {"door5": "close"},
+		]}
+
+3. Select a door
+URI:	/game/doorGame/select/1
+Verb:	PUT
+JSON:	{"door1" : "selected"}
+		
+4. Open a door
+URI:	/game/doorGame/open/1
+Verb:	PUT
+JSON:	{"door1" : "open"}
+
+5. List the final state of the game
+URI:	/game/doorGame/gameStatus
+Verb:	GET
+JSON:	{"gameStatus": "win"}
+
+6. Delete game
+URI:	/game/doorGame
+Verb:	DELETE
+JSON:	{}
+
