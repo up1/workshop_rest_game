@@ -14,14 +14,14 @@ POST doors/newgame
 
 GET doors/list/gameId
 “doors”:[
-    {“door_no”:”1”, “state”:”CLOSE”},
-    {“door_no”:”2”, “state”: “CLOSE”},
-    {“door_no”:”3”, “state”: “OPENED”}
-    {“door_no”:”4”, “state”:”CLOSE”},
-    {“door_no”:”5”, “state”: “OPENED”},
-    {“door_no”:”6”, “state”: “CLOSE”}
-    {“door_no”:”7”, “state”:”CLOSE”},
-    {“door_no”:”8”, “state”: “CLOSE”}
+    {“door_no”:”1”, "item":”empty”, “state”:”CLOSE”},
+    {“door_no”:”2”, "item":"empty", “state”: “CLOSE”},
+    {“door_no”:”3”, "item":”empty”, “state”:"OPENED"},
+    {“door_no”:”4”, "item":"cat", “state”: “CLOSE”},
+	{“door_no”:”5”, "item":"empty", "state": "CLOSE"},
+    {“door_no”:”6”, "item":"empty", “state”: "OPENED"},
+	{“door_no”:”7”, "item":”empty”, “state”:”CLOSE”},
+    {“door_no”:”8”, "item":"empty", “state”: “CLOSE”},
 ]
 
 PUT doors/select/gameId/doorNo
