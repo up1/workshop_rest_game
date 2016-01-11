@@ -3,11 +3,7 @@ Create new game
 - URL POST /games
 - return
 {
-	“id”:”1”,
-	“num_of_doors”: 7,
-	“win_score”: 5,
-	“state”: “WIN”,
-	“timeout”: 1
+	“id”: 1
 }
 
 —————————————————
@@ -97,7 +93,7 @@ Open a door
 —————————————————
 
 List the final state of the game
-- GET /games/
+- GET /games/1
 {
 	“id”:”1”,
 	“num_of_doors”: 7,
