@@ -1,0 +1,36 @@
+
+crate geme 
+>>> uri = /createGame
+>>> verb = POST
+>>> JSON = -
+>>> response = 
+
+list current state of all doors
+>>> uri = /listStateAllDoors
+>>> verb = GET
+>>> JSON = GET/game/1
+>>> response = 
+
+select a door
+>>> uri = /selectDoor
+>>> verb = PUT
+>>> JSON = {"selectDoor" : doorNumber}
+>>> response = 
+
+open a door
+>>> uri = /OpenDoor
+>>> verb = PUT
+>>> JSON = {"openDoor" : doorNumber}
+>>> response = 
+
+list the final state of the game
+>>> uri = /listFinalStateGame
+>>> verb = GET
+>>> JSON = GET/game/1
+>>> response = 
+
+delete game
+>>> uri = /deleteGame
+>>> verb = DELTE
+>>> JSON = DELTE/geme/1
+>>> response = 
