@@ -1,0 +1,46 @@
+Create new game
+List current state of all doors
+Select a door
+Open a door
+List the final state of the game
+Delete game
+
+
+POST doors/newgame
+{
+	“game_id” : “000001”
+	“doorsCount” : “8”
+}
+
+GET doors/list/gameId
+“doors”:[
+    {“door_no”:”1”, “state”:”CLOSE”}, 
+    {“door_no”:”2”, “state”: “CLOSE”}, 
+    {“door_no”:”3”, “state”: “OPENED”}
+    {“door_no”:”4”, “state”:”CLOSE”}, 
+    {“door_no”:”5”, “state”: “OPENED”}, 
+    {“door_no”:”6”, “state”: “CLOSE”}
+    {“door_no”:”7”, “state”:”CLOSE”}, 
+    {“door_no”:”8”, “state”: “CLOSE”}
+]
+
+PUT doors/select/gameId/doorNo
+
+
+POST doors/open/gameId/doorNo
+{
+	“door_no”:”1”
+	“state”:”FOUND”
+}
+
+POST doors/stateOfGame/gameId
+{
+	“status”:”000001”
+}
+
+
+DELETE doors/end/gameId
+{
+	“game_id”:”000001”
+}
+
