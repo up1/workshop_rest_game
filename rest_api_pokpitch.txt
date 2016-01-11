@@ -3,17 +3,13 @@ Create new game
 - URL POST /games
 - return
 {
-	“id”:”1”,
-	“num_of_doors”: 7,
-	“win_score”: 5,
-	“state”: “WIN”,
-	“timeout”: 1
+	“id”: 1
 }
 
 —————————————————
 
 List current state of all doors
- -  URL GET /{game_id}/doors/
+ -  URL GET /games/{game_id}/doors/
 
  [
 
@@ -70,7 +66,7 @@ List current state of all doors
 —————————————————
 Select a door
 
-- PUT /{game_id}/door/0
+- PUT /games/{game_id}/door/0
 { “selected”: true }
 
 - return
@@ -84,7 +80,7 @@ Select a door
 —————————————————
 
 Open a door
-- PUT /{game_id}/door/0
+- PUT /games/{game_id}/door/0
 { “state”: “OPENED” }
 - return
 {
@@ -97,7 +93,7 @@ Open a door
 —————————————————
 
 List the final state of the game
-- GET /games/
+- GET /games/1
 {
 	“id”:”1”,
 	“num_of_doors”: 7,
