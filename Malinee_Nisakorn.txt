@@ -1,0 +1,38 @@
+Interaction model
+
+Create new game
+	uri : /create
+	verb : post    
+	json: {"gameStatus" : "" , "time":"60" , "target":"book"}
+
+
+List current state of all doors
+        uri : /listDoorsState
+        verb : get
+        json: { "listDoors" :[
+		  { "id" :"1" ,item: "cat" , "doorStatus" : "close" },	
+	          { "id" :"2" ,item: "car" , "doorStatus" : "close" },
+                  { "id" :"3" ,item: "book" , "doorStatus" : "close" },
+  		  { "id" :"4" ,item: "phone" , "doorStatus" : "close" },
+		  { "id" :"5" ,item: "tree" , "doorStatus" : "close" }	
+ 		]} 
+
+Select a door
+	uri : /select/1
+        verb : put
+        json : {"canOpen":"true"}
+
+Open a door
+        uri : /open/1
+        verb : put   
+        json : {"item" : "book"} 
+  
+List the final state of game
+        uri : /listGameState
+        verb : get
+        json : {"gameStatus" : "Success"} 
+
+Delete game
+        uri : /delete
+	verb : post    
+
