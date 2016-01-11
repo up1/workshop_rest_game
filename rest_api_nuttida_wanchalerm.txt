@@ -10,7 +10,7 @@ HTTP response :
 
 2. List current state of all doors
 URI : listdoor
-HTTP : Get game/1/door/1
+HTTP : Get game/1/door/
 HTTP response :	
 [{"door_id":"1",
 "status":"close"},

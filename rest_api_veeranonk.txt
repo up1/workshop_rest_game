@@ -6,42 +6,46 @@ List the final state of the game
 Delete game
 
 
-POST doors/newgame
+POST doors/game
 {
-	“game_id” : “000001”,
+	“gameId” : “000001”,
 	“doorsCount” : “8”
 }
 
 GET doors/list/gameId
 “doors”:[
-    {“door_no”:”1”, "item":”empty”, “state”:”CLOSE”},
-    {“door_no”:”2”, "item":"empty", “state”: “CLOSE”},
-    {“door_no”:”3”, "item":”empty”, “state”:"OPENED"},
-    {“door_no”:”4”, "item":"cat", “state”: “CLOSE”},
-    {“door_no”:”5”, "item":"empty", "state": "CLOSE"},
-    {“door_no”:”6”, "item":"empty", “state”: "OPENED"},
-    {“door_no”:”7”, "item":”empty”, “state”:”CLOSE”},
-    {“door_no”:”8”, "item":"empty", “state”: “CLOSE”},
+    {“doorNo”:”1”, "item":”empty”, “state”:”CLOSE”},
+    {“doorNo”:”2”, "item":"empty", “state”: “CLOSE”},
+    {“doorNo”:”3”, "item":”empty”, “state”:"OPENED"},
+    {“doorNo”:”4”, "item":"cat", “state”: “CLOSE”},
+    {“doorNo”:”5”, "item":"empty", "state": "CLOSE"},
+    {“doorNo”:”6”, "item":"empty", “state”: "OPENED"},
+    {“doorNo”:”7”, "item":”empty”, “state”:”CLOSE”},
+    {“doorNo”:”8”, "item":"empty", “state”: “CLOSE”},
 ]
 
 PUT doors/select/gameId/doorNo
-
+{
+	"gameId":"000001",
+	"doorNo":”1”,
+}
 
 POST doors/open/gameId/doorNo
 {
 	"gameId":"000001",
-	"door_no":”1”,
+	"doorNo":”1”,
 	"state":"FOUND"
 }
 
 POST doors/stateOfGame/gameId
 {
+	"gameId":"000001",
 	“status”:”WIN”
 }
 
 
 DELETE doors/end/gameId
 {
-	“game_id”:”000001”
+	“gameId”:”000001”
 }
 
