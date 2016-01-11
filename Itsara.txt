@@ -11,7 +11,7 @@ list current state of all doors
 >>> JSON = GET/game/1
 >>> response = 
 
-select a door (เปิด,ปิด,เลือกไม่เลือก) 
+select a door
 >>> uri = /selectDoor
 >>> verb = PUT
 >>> JSON = {"selectDoor" : doorNumber}
